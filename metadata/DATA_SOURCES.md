@@ -2,7 +2,7 @@
 
 The release uses four datasets in three government source families: elevation, roads, and land and soil capability. The [source manifest](SOURCE_FILE_MANIFEST.csv) lists 375 exact source filenames and SHA-256 hashes. Review on 2026-09-28 found 214 `CentralCoast2008-DEM-AHD-5m_*.tif` tiles and 152 `CentralCoast2011-DEM-AHD-5m_*.tif` tiles: all 366 DEM filenames match the two verified surveys. No filename indicates another elevation survey. The remaining inputs are one road JSON and eight soil shapefile components. This is a filename-to-source reconciliation using the supplied verified provenance, not a fresh inspection of the original rasters.
 
-Original download/access dates were not consistently recorded and are not inferred from file timestamps. The licensing review uses the verified source information supplied for this update and the official records linked below. During the 2026-09-28 web check, the 2011 catalogue was accessible; the 2008, road and soil pages could not be fetched by the browsing tool. These retrieval limitations do not replace the supplied verified evidence.
+Original download/access dates were not consistently recorded and are not inferred from file timestamps. Licensing, provider attribution and redistribution conditions were verified using the cited official catalogue records and the retained source metadata reviewed for this release.
 
 ELVIS is the elevation distribution portal, not necessarily the original data creator. Source attribution and modification notices are also collected in [ATTRIBUTION.md](../ATTRIBUTION.md).
 

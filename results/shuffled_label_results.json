@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "feature_matrix_unchanged": true,
+  "train_feature_matrix_sha256": "c0b5096cfd96157be4f32b34f0e21a917f9b5bef564c39d87252435ef1e5161a",
+  "class_balancing": "class_weight='balanced' only",
+  "classification_threshold": 0.5,
+  "n": 4244,
+  "accuracy": 0.5914231856738925,
+  "precision": 0.11540822590546347,
+  "recall": 0.3908523908523909,
+  "f1": 0.17819905213270143,
+  "roc_auc": 0.4929312271858113,
+  "average_precision": 0.11788053917798524,
+  "confusion_matrix": [
+    [
+      2322,
+      1441
+    ],
+    [
+      293,
+      188
+    ]
+  ]
+}

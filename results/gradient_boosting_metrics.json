@@ -1,0 +1,44 @@
+{
+  "model": "lightgbm.LGBMClassifier",
+  "features": [
+    "slope",
+    "road_distance_m",
+    "ground_difficulty_score",
+    "LSC_MstLmt",
+    "LSC_WatrEr",
+    "LSC_Watlog",
+    "LSC_Mass_m",
+    "LSC_Sh_Rk",
+    "LSC_StrD"
+  ],
+  "train_rows": 16973,
+  "test_rows": 4244,
+  "threshold": 0.5,
+  "class_balancing": "class_weight='balanced' only; no fit-time sample_weight",
+  "configuration": {
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "num_leaves": 15,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "reg_lambda": 0.0,
+    "random_state": 42
+  },
+  "n": 4244,
+  "accuracy": 0.9988218661639963,
+  "precision": 0.99581589958159,
+  "recall": 0.9937369519832986,
+  "f1": 0.9947753396029259,
+  "roc_auc": 0.9999841968243934,
+  "average_precision": 0.999867301429318,
+  "confusion_matrix": [
+    [
+      3763,
+      2
+    ],
+    [
+      3,
+      476
+    ]
+  ]
+}

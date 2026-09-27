@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite this reproducibility release and the associated paper. A DOI will be added after archival."
+title: "PrefabSearch: reproducibility release for geospatial prefab-construction site screening"
+type: software
+version: 1.0.0
+date-released: 2026-09-14
+authors:
+  - family-names: Tasnim
+    given-names: Maliha
+  - family-names: Shaffiei
+    given-names: "Zatul Alwani Binti"
+abstract: >-
+  Corrected source code, fixed splits, model artifacts, prediction tables,
+  robustness analyses, and figures for the associated Results in Engineering
+  manuscript. The MIT licence applies to author-owned source code, configuration and
+  associated software/model artifacts; see
+  metadata/LICENSE_NOTES.md for data and derived-artifact boundaries.
+preferred-citation:
+  type: article
+  title: "Geospatial decision support for prefabricated construction site screening: A reproducible comparison of weighted MCDA and machine learning"
+  authors:
+    - family-names: Tasnim
+      given-names: Maliha
+    - family-names: Shaffiei
+      given-names: "Zatul Alwani Binti"

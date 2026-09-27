@@ -1,0 +1,26 @@
+{
+  "procedure": "sklearn train_test_split by site_id",
+  "test_size": 0.2,
+  "random_state": 42,
+  "stratify": "prefab_label",
+  "fixed_point_iterations": 1,
+  "ground_score_imputation_reference": "valid development rows only",
+  "rows": 21217,
+  "train_rows": 16973,
+  "test_rows": 4244,
+  "class_counts": {
+    "0": 18822,
+    "1": 2395
+  },
+  "train_class_counts": {
+    "0": 15057,
+    "1": 1916
+  },
+  "test_class_counts": {
+    "0": 3765,
+    "1": 479
+  },
+  "development_ground_difficulty_median": 0.3214285714285714,
+  "labels_changed_among_retained_sites": 16,
+  "water_rows_removed": 9
+}

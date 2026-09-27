@@ -1,0 +1,9 @@
+{
+  "crs": "EPSG:7856",
+  "coordinate": "geometry x/easting",
+  "threshold_m": 373370.0,
+  "rule": "west_train if easting <= threshold; east_test otherwise",
+  "west_train_rows": 10639,
+  "east_test_rows": 10578,
+  "interpretation": "directional internal sensitivity check, not external validation"
+}

@@ -1,0 +1,8 @@
+{
+  "slope_min": 0.0,
+  "slope_max": 63.99103546142578,
+  "road_distance_min": 0.1742013742301135,
+  "road_distance_max": 10979.809797145928,
+  "reference": "development rows only",
+  "out_of_range_policy": "clip transformed target values to [0, 1]"
+}

@@ -1,0 +1,17 @@
+{
+  "selected_threshold": 0.873051144070395,
+  "development_f1": 0.7402452619843924,
+  "development_accuracy": 0.9450892594120073,
+  "candidate_thresholds_evaluated": 16973,
+  "tie_breaking_rule": "maximum F1, then maximum accuracy, then lowest threshold",
+  "selection_data": "development rows only",
+  "development_rows": 16973,
+  "normalisation_parameters": {
+    "slope_min": 0.0,
+    "slope_max": 63.99103546142578,
+    "road_distance_min": 0.1742013742301135,
+    "road_distance_max": 10979.809797145928,
+    "reference": "development rows only",
+    "out_of_range_policy": "clip transformed target values to [0, 1]"
+  }
+}

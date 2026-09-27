@@ -1,0 +1,109 @@
+study:
+  grid_spacing_m: 100
+  projected_crs: "EPSG:7856"
+  boundary_file: "data/study_area_boundary.geojson"
+  source_feature_file: "data/source/analysis_grid_with_raw_lsc_codes.csv"
+  processed_roads_file: "data/source/roads_7856.gpkg"
+  original_candidate_points: 21554
+  removed_without_dem_coverage: 103
+  other_feature_quality_exclusions_before_soil_correction: 225
+
+features:
+  columns:
+    - slope
+    - road_distance_m
+    - ground_difficulty_score
+    - LSC_MstLmt
+    - LSC_WatrEr
+    - LSC_Watlog
+    - LSC_Mass_m
+    - LSC_Sh_Rk
+    - LSC_StrD
+  soil_columns:
+    - LSC_MstLmt
+    - LSC_WatrEr
+    - LSC_Watlog
+    - LSC_Mass_m
+    - LSC_Sh_Rk
+    - LSC_StrD
+  ground_difficulty_weights:
+    LSC_MstLmt: 0.30
+    LSC_WatrEr: 0.15
+    LSC_Watlog: 0.15
+    LSC_Mass_m: 0.15
+    LSC_Sh_Rk: 0.15
+    LSC_StrD: 0.10
+  valid_soil_min: 1.0
+  valid_soil_max: 8.0
+  code_98_policy: "not assessed; convert to missing"
+  code_99_policy: "water; exclude when any of the six mapped fields is 99"
+
+target:
+  name: "prefab_label"
+  slope_threshold_deg: 10.0
+  road_distance_threshold_m: 1000.0
+  ground_difficulty_threshold: 0.45
+  interpretation: "rule-derived proxy, not a completed-project outcome"
+
+splits:
+  test_size: 0.20
+  random_state: 42
+  stratify: "prefab_label"
+  spatial_easting_threshold_m: 373370.0
+  spatial_rule: "west_train if easting <= threshold; east_test otherwise"
+
+models:
+  weighted_mcda:
+    weights:
+      slope_score: 0.30
+      road_access_score: 0.25
+      ground_score: 0.25
+      erosion_score: 0.05
+      waterlogging_score: 0.05
+      mass_movement_score: 0.05
+      shallow_rock_score: 0.03
+      structure_decline_score: 0.02
+    threshold_selection: "maximum development F1; then maximum accuracy; then lowest threshold"
+  lightgbm:
+    implementation: "lightgbm.LGBMClassifier"
+    threshold: 0.50
+    class_weight: "balanced"
+    n_estimators: 300
+    learning_rate: 0.10
+    num_leaves: 15
+    max_depth: -1
+    min_child_samples: 20
+    reg_lambda: 0.0
+    random_state: 42
+  mlp:
+    implementation: "sklearn.neural_network.MLPClassifier"
+    threshold: 0.50
+    hidden_layer_sizes: [32, 16]
+    activation: "relu"
+    solver: "adam"
+    alpha: 0.001
+    batch_size: 32
+    learning_rate: "adaptive"
+    learning_rate_init: 0.001
+    max_iter: 1000
+    early_stopping: true
+    validation_fraction: 0.15
+    n_iter_no_change: 25
+    random_state: 42
+
+robustness:
+  cv_folds: 5
+  mcda_weight_scenarios: 5000
+  mcda_weight_perturbation_fraction: 0.20
+  mcda_weight_seed: 20260912
+  permutation_repeats: 20
+  permutation_seed: 42
+  shuffled_label_seed: 42
+  boundary_windows:
+    slope_degrees: 0.5
+    road_distance_m: 100.0
+    ground_difficulty: 0.025
+
+validation:
+  numerical_tolerance: 0.00001
+

@@ -1,0 +1,13 @@
+{
+  "LSC_MstLmt": 7.0,
+  "LSC_WatrEr": 2.0,
+  "LSC_Watlog": 2.0,
+  "LSC_Mass_m": 1.0,
+  "LSC_Sh_Rk": 1.0,
+  "LSC_StrD": 1.0,
+  "ground_difficulty_score": 0.3214285714285714,
+  "fit_scope": "development rows only",
+  "train_rows": 16973,
+  "test_rows": 4244,
+  "application": "same fitted values applied to development and held-out rows"
+}

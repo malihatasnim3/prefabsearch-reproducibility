@@ -1,0 +1,6 @@
+band,n,positive_prevalence,weighted_mcda_errors,gradient_boosting_errors,mlp_errors,all_methods_agree
+ground_score_within_0.025,94,0.13829787234042554,13,0,0,81
+outside_selected_boundary_bands,3950,0.09670886075949367,160,0,6,3789
+overlapping_boundary_bands,9,0.5555555555555556,5,0,0,4
+road_distance_within_100_m,150,0.47333333333333333,59,5,11,80
+slope_within_0.5_degrees,41,0.1951219512195122,8,0,1,33

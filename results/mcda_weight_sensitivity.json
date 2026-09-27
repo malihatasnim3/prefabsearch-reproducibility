@@ -1,0 +1,52 @@
+{
+  "design": {
+    "runs": 5000,
+    "seed": 20260912,
+    "perturbation": "each base weight multiplied independently by Uniform(0.8, 1.2), then renormalised",
+    "classification_threshold": 0.873051144070395,
+    "threshold_treatment": "held fixed",
+    "normalisation": "main development-fitted bounds"
+  },
+  "baseline": {
+    "positive_predictions": 406,
+    "n": 4244,
+    "accuracy": 0.9422714420358153,
+    "precision": 0.7881773399014779,
+    "recall": 0.6680584551148225,
+    "f1": 0.7231638418079096,
+    "roc_auc": 0.927498357301483,
+    "average_precision": 0.7911375083875437,
+    "confusion_matrix": [
+      [
+        3679,
+        86
+      ],
+      [
+        159,
+        320
+      ]
+    ]
+  },
+  "summary": {
+    "rank_correlation_spearman": {
+      "p05": 0.9910953693593163,
+      "median": 0.9983592194687423,
+      "p95": 0.9997992114633791
+    },
+    "changed_classifications": {
+      "p05": 22.0,
+      "median": 132.0,
+      "p95": 325.0
+    },
+    "positive_predictions": {
+      "p05": 155.0,
+      "median": 404.0,
+      "p95": 729.0500000000002
+    },
+    "f1": {
+      "p05": 0.46605739448445727,
+      "median": 0.6854082998661312,
+      "p95": 0.7510879471405788
+    }
+  }
+}

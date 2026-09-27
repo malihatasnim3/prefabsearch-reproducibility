@@ -1,0 +1,12 @@
+metric,before,after,difference,reason
+candidate_observations,21554,21554,0,Unchanged upstream 100 m candidate grid.
+invalid_elevation_exclusions,103,103,0,Unchanged upstream DEM-validity filter.
+other_feature_quality_exclusions,225,225,0,Unchanged missing slope/road feature filter.
+final_observations,21226,21217,-9,Rows mapped as Water were excluded.
+water_excluded_observations,0,9,9,Any of the six relevant LSC fields equal to 99 identifies Water.
+special_code_98_rows,81,81,0,Code 98 rows are retained but treated as missing evidence.
+special_code_99_rows,9,0,-9,Code 99 rows are excluded from construction-screening candidates.
+complete_valid_soil_rows,3187,3187,0,All six LSC values must be ordinary classes 1–8.
+fully_missing_valid_soil_rows,18039,18030,-9,Code 98 and other invalid values do not count as evidence.
+proxy_positive_rows,2379,2395,16,Target rebuilt after corrected development-derived ground-score imputation.
+proxy_negative_rows,18847,18822,-25,Target rebuilt after corrected development-derived ground-score imputation.

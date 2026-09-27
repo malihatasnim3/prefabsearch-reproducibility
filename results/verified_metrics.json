@@ -1,0 +1,190 @@
+{
+  "held_out": {
+    "weighted_mcda": {
+      "n": 4244,
+      "accuracy": 0.9422714420358153,
+      "precision": 0.7881773399014779,
+      "recall": 0.6680584551148225,
+      "f1": 0.7231638418079096,
+      "roc_auc": 0.927498357301483,
+      "average_precision": 0.7911375083875437,
+      "confusion_matrix": [
+        [
+          3679,
+          86
+        ],
+        [
+          159,
+          320
+        ]
+      ]
+    },
+    "gradient_boosting": {
+      "n": 4244,
+      "accuracy": 0.9988218661639963,
+      "precision": 0.99581589958159,
+      "recall": 0.9937369519832986,
+      "f1": 0.9947753396029259,
+      "roc_auc": 0.9999841968243934,
+      "average_precision": 0.999867301429318,
+      "confusion_matrix": [
+        [
+          3763,
+          2
+        ],
+        [
+          3,
+          476
+        ]
+      ]
+    },
+    "mlp": {
+      "n": 4244,
+      "accuracy": 0.9957587181903864,
+      "precision": 0.9832285115303984,
+      "recall": 0.9791231732776617,
+      "f1": 0.9811715481171548,
+      "roc_auc": 0.9998597121604049,
+      "average_precision": 0.9989564369370857,
+      "confusion_matrix": [
+        [
+          3757,
+          8
+        ],
+        [
+          10,
+          469
+        ]
+      ]
+    }
+  },
+  "held_out_disagreement": {
+    "weighted_mcda_vs_gradient_boosting": 250,
+    "weighted_mcda_vs_mlp": 249,
+    "gradient_boosting_vs_mlp": 15,
+    "all_three_agree": 3987
+  },
+  "soil_coverage_sensitivity": {
+    "weighted_mcda": {
+      "valid_soil_evidence": {
+        "n": 653,
+        "accuracy": 0.8254211332312404,
+        "precision": 0.9166666666666666,
+        "recall": 0.4852941176470588,
+        "f1": 0.6346153846153846,
+        "roc_auc": 0.9152037206864928,
+        "average_precision": 0.8490354527498939,
+        "confusion_matrix": [
+          [
+            440,
+            9
+          ],
+          [
+            105,
+            99
+          ]
+        ]
+      },
+      "soil_missing": {
+        "n": 3591,
+        "accuracy": 0.9635199108883319,
+        "precision": 0.7416107382550335,
+        "recall": 0.8036363636363636,
+        "f1": 0.7713787085514834,
+        "roc_auc": 0.9816460138173045,
+        "average_precision": 0.8822003201951168,
+        "confusion_matrix": [
+          [
+            3239,
+            77
+          ],
+          [
+            54,
+            221
+          ]
+        ]
+      }
+    },
+    "gradient_boosting": {
+      "valid_soil_evidence": {
+        "n": 653,
+        "accuracy": 0.998468606431853,
+        "precision": 0.9951219512195122,
+        "recall": 1.0,
+        "f1": 0.9975550122249389,
+        "roc_auc": 1.0,
+        "average_precision": 0.9999999999999999,
+        "confusion_matrix": [
+          [
+            448,
+            1
+          ],
+          [
+            0,
+            204
+          ]
+        ]
+      },
+      "soil_missing": {
+        "n": 3591,
+        "accuracy": 0.998886104149262,
+        "precision": 0.9963369963369964,
+        "recall": 0.9890909090909091,
+        "f1": 0.9927007299270073,
+        "roc_auc": 0.9999764228533831,
+        "average_precision": 0.9996906964003738,
+        "confusion_matrix": [
+          [
+            3315,
+            1
+          ],
+          [
+            3,
+            272
+          ]
+        ]
+      }
+    },
+    "mlp": {
+      "valid_soil_evidence": {
+        "n": 653,
+        "accuracy": 0.9862174578866769,
+        "precision": 0.9899497487437185,
+        "recall": 0.9656862745098039,
+        "f1": 0.9776674937965261,
+        "roc_auc": 0.9995196296781519,
+        "average_precision": 0.9989790342193217,
+        "confusion_matrix": [
+          [
+            447,
+            2
+          ],
+          [
+            7,
+            197
+          ]
+        ]
+      },
+      "soil_missing": {
+        "n": 3591,
+        "accuracy": 0.9974937343358395,
+        "precision": 0.9784172661870504,
+        "recall": 0.9890909090909091,
+        "f1": 0.9837251356238698,
+        "roc_auc": 0.9999692948788244,
+        "average_precision": 0.9996337241761829,
+        "confusion_matrix": [
+          [
+            3310,
+            6
+          ],
+          [
+            3,
+            272
+          ]
+        ]
+      }
+    }
+  },
+  "interpretation": "agreement with a deterministic proxy target, not field validation"
+}

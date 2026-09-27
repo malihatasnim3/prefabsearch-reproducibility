@@ -1,0 +1,12 @@
+{
+  "definition": "all six LSC fields are ordinary values in 1-8",
+  "random_state": 42,
+  "stratified": true,
+  "rows": 3187,
+  "train_rows": 2549,
+  "test_rows": 638,
+  "class_counts": {
+    "0": 2188,
+    "1": 999
+  }
+}

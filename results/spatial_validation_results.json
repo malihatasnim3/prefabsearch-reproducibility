@@ -1,0 +1,34 @@
+{
+  "interpretation": "directional internal sensitivity check, not external validation",
+  "classification_threshold": 0.5,
+  "class_balancing": "class_weight='balanced' only",
+  "imputation_fit_scope": "west training rows only",
+  "imputation_values": {
+    "LSC_MstLmt": 7.0,
+    "LSC_WatrEr": 3.0,
+    "LSC_Watlog": 2.0,
+    "LSC_Mass_m": 1.0,
+    "LSC_Sh_Rk": 1.0,
+    "LSC_StrD": 1.0,
+    "ground_difficulty_score": 0.3214285714285714
+  },
+  "west_train_rows": 10639,
+  "east_test_rows": 10578,
+  "n": 10578,
+  "accuracy": 0.9981092834184155,
+  "precision": 0.9877300613496932,
+  "recall": 0.9969040247678018,
+  "f1": 0.9922958397534669,
+  "roc_auc": 0.999952573500239,
+  "average_precision": 0.999653842512253,
+  "confusion_matrix": [
+    [
+      9270,
+      16
+    ],
+    [
+      4,
+      1288
+    ]
+  ]
+}

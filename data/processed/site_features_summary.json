@@ -1,0 +1,22 @@
+{
+  "original_candidate_points": 21554,
+  "invalid_elevation_exclusions": 103,
+  "other_feature_quality_exclusions": 225,
+  "excluded_water_rows": 9,
+  "final_observations": 21217,
+  "special_code_98_rows": 81,
+  "special_code_99_rows_in_final_dataset": 0,
+  "final_soil_missing_rows": 18030,
+  "final_valid_soil_rows": 3187,
+  "final_complete_case_rows": 3187,
+  "pre_cleanup_ground_score_imputations": 18085,
+  "final_ground_score_imputations": 18030,
+  "development_ground_difficulty_median": 0.3214285714285714,
+  "proxy_class_counts": {
+    "0": 18822,
+    "1": 2395
+  },
+  "proxy_prevalence": 0.11288118018570015,
+  "labels_changed_among_retained_sites": 16,
+  "target_interpretation": "rule-derived proxy, not a completed-project outcome"
+}

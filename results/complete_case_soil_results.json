@@ -1,0 +1,95 @@
+{
+  "analysis_name": "complete-case soil-coverage sensitivity analysis",
+  "interpretation": "internal sensitivity against the deterministic proxy label; not external validation",
+  "definition": "all six LSC fields are ordinary values in 1-8",
+  "source_rows": 21217,
+  "complete_case_rows": 3187,
+  "positive_rows": 999,
+  "positive_prevalence": 0.3134609350486351,
+  "split": {
+    "random_state": 42,
+    "stratified": true,
+    "train_rows": 2549,
+    "test_rows": 638,
+    "train_positive_rows": 799,
+    "test_positive_rows": 200
+  },
+  "mcda_normalisation": {
+    "slope_min": 0.0015696482732892,
+    "slope_max": 60.225250244140625,
+    "road_distance_min": 0.0142181710015432,
+    "road_distance_max": 10174.589399458577,
+    "reference": "development rows only",
+    "out_of_range_policy": "clip transformed target values to [0, 1]"
+  },
+  "mcda_threshold_selection": {
+    "selected_threshold": 0.8485344563323173,
+    "development_f1": 0.7751134154244977,
+    "development_accuracy": 0.8638681836014123,
+    "candidate_thresholds_evaluated": 2549,
+    "tie_breaking_rule": "maximum F1, then maximum accuracy, then lowest threshold"
+  },
+  "evaluation": {
+    "weighted_mcda": {
+      "threshold": 0.8485344563323173,
+      "n": 638,
+      "accuracy": 0.8746081504702194,
+      "precision": 0.8225806451612904,
+      "recall": 0.765,
+      "f1": 0.7927461139896373,
+      "roc_auc": 0.9285502283105023,
+      "average_precision": 0.8777147879493165,
+      "confusion_matrix": [
+        [
+          405,
+          33
+        ],
+        [
+          47,
+          153
+        ]
+      ]
+    },
+    "lightgbm": {
+      "threshold": 0.5,
+      "n": 638,
+      "accuracy": 0.9952978056426333,
+      "precision": 0.9852216748768473,
+      "recall": 1.0,
+      "f1": 0.9925558312655087,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "confusion_matrix": [
+        [
+          435,
+          3
+        ],
+        [
+          0,
+          200
+        ]
+      ]
+    },
+    "mlp": {
+      "threshold": 0.5,
+      "iterations": 91,
+      "n": 638,
+      "accuracy": 0.9952978056426333,
+      "precision": 0.9900497512437811,
+      "recall": 0.995,
+      "f1": 0.9925187032418953,
+      "roc_auc": 0.9998858447488584,
+      "average_precision": 0.9997596889952154,
+      "confusion_matrix": [
+        [
+          436,
+          2
+        ],
+        [
+          1,
+          199
+        ]
+      ]
+    }
+  }
+}

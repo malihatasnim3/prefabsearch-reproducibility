@@ -1,0 +1,56 @@
+{
+  "model": "sklearn.neural_network.MLPClassifier",
+  "features": [
+    "slope",
+    "road_distance_m",
+    "ground_difficulty_score",
+    "LSC_MstLmt",
+    "LSC_WatrEr",
+    "LSC_Watlog",
+    "LSC_Mass_m",
+    "LSC_Sh_Rk",
+    "LSC_StrD"
+  ],
+  "train_rows": 16973,
+  "test_rows": 4244,
+  "threshold": 0.5,
+  "scaler_fit_scope": "development rows only",
+  "early_stopping_scope": "internal validation fraction sampled only from development rows",
+  "iterations": 113,
+  "configuration": {
+    "implementation": "sklearn.neural_network.MLPClassifier",
+    "threshold": 0.5,
+    "hidden_layer_sizes": [
+      32,
+      16
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.001,
+    "batch_size": 32,
+    "learning_rate": "adaptive",
+    "learning_rate_init": 0.001,
+    "max_iter": 1000,
+    "early_stopping": true,
+    "validation_fraction": 0.15,
+    "n_iter_no_change": 25,
+    "random_state": 42
+  },
+  "n": 4244,
+  "accuracy": 0.9957587181903864,
+  "precision": 0.9832285115303984,
+  "recall": 0.9791231732776617,
+  "f1": 0.9811715481171548,
+  "roc_auc": 0.9998597121604049,
+  "average_precision": 0.9989564369370857,
+  "confusion_matrix": [
+    [
+      3757,
+      8
+    ],
+    [
+      10,
+      469
+    ]
+  ]
+}

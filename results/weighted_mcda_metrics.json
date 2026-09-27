@@ -1,0 +1,22 @@
+{
+  "method": "fixed-weight MCDA (not AHP)",
+  "threshold": 0.873051144070395,
+  "threshold_source": "development-set F1 selection",
+  "n": 4244,
+  "accuracy": 0.9422714420358153,
+  "precision": 0.7881773399014779,
+  "recall": 0.6680584551148225,
+  "f1": 0.7231638418079096,
+  "roc_auc": 0.927498357301483,
+  "average_precision": 0.7911375083875437,
+  "confusion_matrix": [
+    [
+      3679,
+      86
+    ],
+    [
+      159,
+      320
+    ]
+  ]
+}
